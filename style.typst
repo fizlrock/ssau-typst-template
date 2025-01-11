@@ -1,0 +1,43 @@
+
+
+#set page(
+  margin: (right: 15mm, left: 30mm, top: 20mm, bottom: 20mm),
+  numbering: "1"
+)
+
+
+#set text(
+  size: 14pt,
+  font: "Times New Roman",
+  style: "normal"
+)
+
+#set par(
+  first-line-indent: 1.25cm, // Абзацный отступ
+  leading: 1.5em, // Межстрочный интервал
+  spacing: 1.5em, // Интервал между параграфами
+  justify: true, // Выравнивание по ширине
+)
+
+
+#show heading: it => {
+
+  set text(
+    size: 14pt,
+    font: "Times New Roman",
+    weight: "medium",
+    style: "normal"
+  )
+
+  if(it.level == 1){[
+    #set align(center)
+    #upper(it.body)
+  ]}
+
+  else if(it.level == 2){[
+    #set align(left)
+    #text(it.body)
+  ]}
+}
+// #set par.line(numbering: "1")
+
