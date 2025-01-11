@@ -6,7 +6,7 @@
 )
 
 #set text(
-  size: 14pt,
+  size: 12pt,
   font: "Times New Roman",
   style: "normal"
 )
@@ -27,15 +27,13 @@
   if ns.len() == 1 {
     return none
   }
-  return numbering("1.", ..ns)
+  return numbering("1.1", ..ns)
 })
-
-// #set heading(numbering: "1.")
 
 
 #show heading.where(level: 1): it => [
     #set text(
-      size: 14pt,
+      size: 12pt,
       font: "Times New Roman",
       weight: "medium",
       style: "normal"
@@ -47,7 +45,7 @@
 
 #show heading.where(level: 2): it => [
     #set text(
-      size: 14pt,
+      size: 12pt,
       font: "Times New Roman",
       weight: "medium",
       style: "normal"
@@ -59,16 +57,7 @@
 ]
 
 
-// #show outline.entry.where(level: 1): it => {
-//   it.body
-// }
-
-
 #outline(title: "Содержание")
-
-
-
-
 
 = Введение
 == Ебучая верстка
@@ -85,6 +74,7 @@ Helix – это мощный редактор, фокусированный н�
 В качестве средства сборки и управления зависимостями для Scala проектов используется SBT (Scala Build Tool).
 В качестве средства сборки и управления зависимостями для Scala проектов используется SBT (Scala Build Tool).
 
+== Новый подраздел
 SBT – это инструмент сборки для Scala и Java, ориентированный на гибкость и интерактивность. Он позволяет эффективно управлять зависимостями, запускать тесты и автоматизировать процессы сборки.
 
 Среди ключевых особенностей SBT:
