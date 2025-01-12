@@ -58,11 +58,19 @@
 }
 
 
+#show outline.entry.where(
+  level: 3
+): it => {
+  // pad(left:0cm, right: 0cm, top: 0cm, bottom: 0cm)[#it]
+
+   pad(left:1.25cm, bottom: -1.10cm)[#it]
+}
+
+
+#set outline.entry()
 
 
 
-// #align(center)[#upper[Содержание]]
-// #outline(title: none)
 #outline(title: "Содержание")
 
 #pagebreak()
@@ -115,3 +123,4 @@ SBT – это инструмент сборки для Scala и Java, орие�
 - были разработаны основные алгоритмы;
 - была разработана программная реализация основных алгоритмов;
 - было сделано описание схем основных алгоритмов и программного обеспечения анализа аудиопотока и детектирования речи.
+
